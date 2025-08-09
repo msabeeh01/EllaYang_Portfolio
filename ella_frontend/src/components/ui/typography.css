@@ -1,0 +1,26 @@
+.heading {
+  line-height: var(--line-height-heading);
+  color: var(--color-primary);
+}
+
+.text-display {
+  font-size: var(--font-lg);
+  font-weight: 600;
+}
+
+.text-body-large {
+  font-size: var(--font-md);
+  font-weight: 600;
+  line-height: 47px;
+}
+
+.text-body {
+  font-size: var(--font-sm);
+  font-weight: 500;
+  line-height: 29px;
+}
+
+.text-section-heading{
+    font-size: 72px;
+    font-weight: 700;
+}

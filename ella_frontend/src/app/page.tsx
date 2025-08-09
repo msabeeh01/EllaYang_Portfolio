@@ -1,49 +1,43 @@
-import Image from "next/image";
 
-import Link from "next/link";
-import { type SanityDocument } from "next-sanity";
-import imageUrlBuilder from "@sanity/image-url";
-
-import { client } from "@/sanity/client";
-
-const POSTS_QUERY = `*[
-  _type == "post"
-  && defined(slug.current)
-]|order(publishedAt desc)[0...12]{
-  _id, 
-  title, 
-  slug, 
-  publishedAt, 
-  "image": image.asset->url
-}`;
-
-const options = { next: { revalidate: 30 } };
-
-const builder = imageUrlBuilder(client);
-function urlFor(source: any) {
-  return builder.image(source);
-}
+import { ProjectGrid } from "@/components/home/project-grid";
+import { Text } from "@/components/ui/typography";
 
 export default async function Home() {
-  const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
-
   return (
-    <main className="container mx-auto min-h-screen max-w-3xl p-8">
-      <h1 className="text-4xl font-bold mb-8">Posts</h1>
-      <ul className="flex flex-col gap-y-4">
-        {posts.map((post) => {
-          console.log("post", post);
-          return (
-            <li className="hover:underline" key={post._id}>
-              <Link href={`/${post.slug.current}`}>
-                <h2 className="text-xl font-semibold">{post.title}</h2>
-                <p>{new Date(post.publishedAt).toLocaleDateString()}</p>
-                <Image src={post.image} alt="" width={500} height={500} />
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+    <main className=" min-h-screen p-8">
+      <div className="grid grid-rows-2">
+        <div>
+          <Text variant="display">Ella(Jinying) Yang</Text>
+        </div>
+        <div className="flex justify-between">
+          <div className="flex max-w-[744px]">
+            <Text variant="body-large">
+              Ella is a graphic/UI designer with 4+ years of experience in
+              branding, marketing, and visual storytelling. Passionate about
+              turning ideas into powerful, functional visuals that make an
+              impact.
+            </Text>
+          </div>
+          <div className="flex">
+            <div className="max-w-[266px]">
+              <Text variant="body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </Text>
+            </div>
+            <div className="max-w-[266px]">
+              <Text variant="body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </Text>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Text variant="section-heading">Works</Text>
+
+      <ProjectGrid />
     </main>
   );
 }
