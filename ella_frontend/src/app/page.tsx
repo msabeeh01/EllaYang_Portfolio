@@ -1,43 +1,24 @@
-
-import { ProjectGrid } from "@/components/home/project-grid";
+import { Hero } from "@/components/home/hero";
+import { ProjectGrid } from "@/components/home/ProjectGrid/project-grid";
 import { Text } from "@/components/ui/typography";
+import { CursorProvider } from "@/providers/CursorProvider";
 
-export default async function Home() {
+export default function Home() {
   return (
-    <main className=" min-h-screen p-8">
-      <div className="grid grid-rows-2">
-        <div>
-          <Text variant="display">Ella(Jinying) Yang</Text>
-        </div>
-        <div className="flex justify-between">
-          <div className="flex max-w-[744px]">
-            <Text variant="body-large">
-              Ella is a graphic/UI designer with 4+ years of experience in
-              branding, marketing, and visual storytelling. Passionate about
-              turning ideas into powerful, functional visuals that make an
-              impact.
-            </Text>
-          </div>
-          <div className="flex">
-            <div className="max-w-[266px]">
-              <Text variant="body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </Text>
-            </div>
-            <div className="max-w-[266px]">
-              <Text variant="body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </Text>
-            </div>
-          </div>
-        </div>
-      </div>
+    <CursorProvider>
+      <main className=" min-h-screen">
+        <Hero />
 
-      <Text variant="section-heading">Works</Text>
+        <div className="min-h-screen bg-gray-700 my-[72px]"></div>
 
-      <ProjectGrid />
-    </main>
+        <div className="min-h-screen p-8">
+          <Text className="text-center mb-[72px]" variant="section-heading">
+            Works
+          </Text>
+
+          <ProjectGrid />
+        </div>
+      </main>
+    </CursorProvider>
   );
 }
