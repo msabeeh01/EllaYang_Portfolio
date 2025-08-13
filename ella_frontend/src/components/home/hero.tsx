@@ -4,7 +4,7 @@ import { Text } from "../ui/typography";
 import * as motion from "motion/react-client";
 export const Hero = () => {
   return (
-    <div className="flex flex-col gap-[82px] h-fit p-8">
+    <div className="flex flex-col gap-[82px] h-fit px-8 pt-8 mt-24">
       <div className=" -space-y-4">
         <div className="overflow-hidden pb-4">
           <motion.div
