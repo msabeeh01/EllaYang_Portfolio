@@ -16,8 +16,8 @@ export const Hero = () => {
               },
             }}
           >
-            <Text variant="display" className="leading-none">
-              Ella(Jinying)
+            <Text variant="display" className="leading-none break-words">
+              Ella (Jingying)
             </Text>
           </motion.div>
         </div>
@@ -32,7 +32,7 @@ export const Hero = () => {
               },
             }}
           >
-            <Text variant="display" className="leading-none">
+            <Text variant="display" className="leading-none break-words">
               Yang
             </Text>
           </motion.div>
