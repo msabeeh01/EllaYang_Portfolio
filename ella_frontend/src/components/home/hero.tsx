@@ -40,7 +40,7 @@ export const Hero = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row justify-between h-fit gap-10 lg:gap-0">
-        <div className="flex max-w-[744px] w-full">
+        <div className="flex lg:max-w-[744px] w-full">
           <Text variant="body-large">
             Ella is a graphic/UI designer with 4+ years of experience in
             branding, marketing, and visual storytelling. Passionate about
