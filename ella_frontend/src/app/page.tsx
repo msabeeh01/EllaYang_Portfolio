@@ -7,13 +7,13 @@ import { CursorProvider } from "@/providers/CursorProvider";
 export default function Home() {
   return (
     <CursorProvider>
-      <main className=" min-h-screen">
+      <main className="min-h-screen">
         <Hero />
 
         <VideoShowcase />
 
         <div className="min-h-screen p-8">
-          <Text className="text-center mb-[72px]" variant="section-heading">
+          <Text className="text-center mb-[72px] overflow-hidden" variant="section-heading">
             Works
           </Text>
 

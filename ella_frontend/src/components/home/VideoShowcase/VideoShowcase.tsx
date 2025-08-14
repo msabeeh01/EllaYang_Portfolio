@@ -22,11 +22,12 @@ const VideoShowcase = () => {
         scrollBehavior: "smooth",
         scrollSnapAlign: "center",
         scrollSnapStop: "always",
+        backgroundImage: `url('/videos/showreel.mp4')`,
       }}
-      className="min-h-screen bg-gray-700 my-[72px]"
+      className="lg:min-h-screen h-fit bg-gray-700 my-[72px] items-center justify-center flex"
     >
-      <video width={"100%"} height={"100%"} muted autoPlay loop>
-        <source src="/videos/showreel.mp4" type="video/mp4" />
+      <video width={"100%"} height={"100%"} className="object-cover" muted autoPlay loop>
+        <source src="/videos/showreel.mp4" className="object-cover" type="video/mp4" />
       </video>
     </motion.div>
   );

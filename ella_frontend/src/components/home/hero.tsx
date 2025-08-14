@@ -39,7 +39,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-between h-fit">
+      <div className="flex flex-col lg:flex-row justify-between h-fit items-center gap-10 lg:gap-0">
         <div className="flex max-w-[744px]">
           <Text variant="body-large">
             Ella is a graphic/UI designer with 4+ years of experience in
@@ -47,7 +47,7 @@ export const Hero = () => {
             turning ideas into powerful, functional visuals that make an impact.
           </Text>
         </div>
-        <div className="flex flex-row gap-[60px]">
+        <div className="flex flex-col md:flex-row gap-[60px] ">
           <div className="max-w-[266px]">
             <Text variant="body">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
