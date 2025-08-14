@@ -16,11 +16,11 @@
 
 .text-body {
   font-size: var(--font-sm);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 29px;
 }
 
 .text-section-heading{
     font-size: 72px;
-    font-weight: 700;
+    font-weight: 600;
 }

@@ -9,6 +9,11 @@
   --font-md: 35px;
   --font-sm: 1rem;
   --line-height-heading: 1.25;
+
+  --spacing-sm: 16px;
+  --spacing-md: 32px;
+  --spacing-lg: 64px;
+
 }
 
 
