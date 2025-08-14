@@ -24,7 +24,11 @@ const VideoShowcase = () => {
         scrollSnapStop: "always",
       }}
       className="min-h-screen bg-gray-700 my-[72px]"
-    ></motion.div>
+    >
+      <video width={"100%"} height={"100%"} muted autoPlay loop>
+        <source src="/videos/showreel.mp4" type="video/mp4" />
+      </video>
+    </motion.div>
   );
 };
 

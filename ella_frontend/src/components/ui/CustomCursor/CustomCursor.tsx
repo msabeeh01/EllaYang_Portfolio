@@ -28,6 +28,7 @@ export const CustomCursor: React.FC<CustomCursorProps> = ({
         width: `${size}px`,
         height: `${size}px`,
         backgroundColor: color,
+        border: `1px solid white`,
       }}
     >
       {hasText && (
